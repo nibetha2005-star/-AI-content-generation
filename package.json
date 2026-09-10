@@ -1,0 +1,25 @@
+{
+  "name": "ai-content-generator",
+  "version": "1.0.0",
+  "description": "Create blog posts or product descriptions with the Gemini API.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "openai",
+    "content-generation",
+    "express",
+    "blog-posts",
+    "product-descriptions"
+  ],
+  "author": "GitHub Copilot",
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.2",
+    "groq-sdk": "^1.5.0"
+  }
+}

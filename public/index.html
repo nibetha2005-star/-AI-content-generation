@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Content Generator</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>AI Content Generator</h1>
+        <p>Create blog posts or product descriptions with the OpenAI API.</p>
+      </header>
+
+      <form id="generator-form">
+        <div class="grid">
+          <label>
+            Content type
+            <select id="type" name="type">
+              <option value="blog">Blog post</option>
+              <option value="product">Product description</option>
+            </select>
+          </label>
+
+          <label>
+            Tone
+            <select id="tone" name="tone">
+              <option value="professional">Professional</option>
+              <option value="friendly">Friendly</option>
+              <option value="persuasive">Persuasive</option>
+              <option value="technical">Technical</option>
+            </select>
+          </label>
+
+          <label>
+            Audience
+            <input id="audience" name="audience" type="text" value="general readers" />
+          </label>
+
+          <label>
+            Length
+            <select id="length" name="length">
+              <option value="short">Short</option>
+              <option value="medium" selected>Medium</option>
+              <option value="long">Long</option>
+            </select>
+          </label>
+        </div>
+
+        <label>
+          Topic or product name
+          <input id="topic" name="topic" type="text" placeholder="e.g. Sustainable remote work tips" required />
+        </label>
+
+        <label>
+          Keywords (optional)
+          <textarea id="keywords" name="keywords" rows="3" placeholder="e.g. productivity, remote work, wellness"></textarea>
+        </label>
+
+        <button type="submit" id="generate-btn">Generate content</button>
+      </form>
+
+      <div id="status" class="status" aria-live="polite"></div>
+
+      <section class="output-panel">
+        <div class="output-header">
+          <h2>Generated output</h2>
+          <button id="copy-btn" type="button" class="secondary">Copy</button>
+        </div>
+        <div id="result" class="result">
+          Your generated content will appear here.
+        </div>
+      </section>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
